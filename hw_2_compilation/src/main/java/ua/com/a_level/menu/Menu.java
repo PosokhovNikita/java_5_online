@@ -3,7 +3,6 @@ package ua.com.a_level.menu;
 import ua.com.a_level.conditions.Lessons;
 import ua.com.a_level.conditions.SumNumbers;
 import ua.com.a_level.conditions.SumSymbols;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
