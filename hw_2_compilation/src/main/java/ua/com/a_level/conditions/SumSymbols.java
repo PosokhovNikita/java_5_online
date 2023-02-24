@@ -3,7 +3,9 @@ package ua.com.a_level.conditions;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
+
 public class SumSymbols {
+
     public static void enterString(BufferedReader bf) throws IOException {
         System.out.println("Enter any value to find out the amount of each character: ");
         String amountInput = bf.readLine();

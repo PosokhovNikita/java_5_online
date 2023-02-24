@@ -2,7 +2,9 @@ package ua.com.a_level.conditions;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+
 public class Lessons {
+
     public static void enterString(BufferedReader bf) throws IOException {
         System.out.println("Enter the number of lesson from 1 to 10: ");
         int lessonInput = Integer.parseInt(bf.readLine());
