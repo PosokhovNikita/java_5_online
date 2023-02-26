@@ -2,7 +2,9 @@ package ua.com.a_level.conditions;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+
 public class SumNumbers {
+
     public static void enterString(BufferedReader bf) throws IOException {
         System.out.println("Enter any value with numbers to find out their sum: ");
         String stringInput = bf.readLine();
@@ -17,8 +19,5 @@ public class SumNumbers {
             }
         }
         System.out.println("The sum of all the numbers in your value: " + sum);
-
     }
-
 }
-
