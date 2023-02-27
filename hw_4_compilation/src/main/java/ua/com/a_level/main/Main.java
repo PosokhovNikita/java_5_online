@@ -1,4 +1,4 @@
-package ua.com.a_level;
+package ua.com.a_level.main;
 
 public class Main {
     public static void main(String[] args) {
