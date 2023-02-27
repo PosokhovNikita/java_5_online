@@ -20,6 +20,7 @@ public class Methods {
     //StringBuilder - При работе со строками, которые часто будут модифицироваться, в однопоточной среде.
     // append() – обновляет значение объекта, который вызвал метод
     public static String reverse(String src, String dest) {
+        //Этот метод позволяет сделать реверс по указанной подстроке в строке
         if (dest.length() > src.length()) {
             return "Wrong data! Try next time!";
         }
@@ -38,6 +39,7 @@ public class Methods {
     //indexOf - возвращает индекс, под которым символ или строка первый раз появляется в строке;
     //возвращает (-1) если символ или строка не найдены
     public static String reverse(String src, int firstIndex, int lastIndex) {
+        //Этот метод позволяет указать с какого индекса нужно сделать реверс
         if (lastIndex > src.length() || firstIndex < 0 ||  firstIndex >= lastIndex) {
             return "Wrong data! Try next time!";
         }
