@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 //service class
 public class StudentController {
 
-     private StudentService studentService = new StudentService();
+    private StudentService studentService = new StudentService();
 
     public void start() throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -18,16 +18,18 @@ public class StudentController {
         System.out.println("\tSelect options:");
         String choose;
         menu();
-        while ((choose = bf.readLine()) != null){
-            crud(bf,choose);
+        while ((choose = bf.readLine()) != null) {
+            crud(bf, choose);
         }
     }
+
     private void exit() {
         System.out.println("Good Bye!");
         System.exit(0);
     }
+
     private void crud(BufferedReader bf, String choose) throws IOException {
-        switch (choose){
+        switch (choose) {
             case "1" -> create(bf);
             case "2" -> update(bf);
             case "3" -> delete(bf);
@@ -37,7 +39,8 @@ public class StudentController {
         }
         menu();
     }
-    private void menu(){
+
+    private void menu() {
         System.out.println();
         System.out.println("\tIf you want to create a student, please enter 1");
         System.out.println("\tIf you want to update a student, please enter 2");
@@ -46,6 +49,7 @@ public class StudentController {
         System.out.println("\tIf you want to find all student, please enter 5");
         System.out.println("\tIf you want to exit from program, please enter 0");
     }
+
     private void create(BufferedReader bf) throws IOException {
         System.out.println("Please enter the first name:");
         String firstName = bf.readLine();
@@ -66,7 +70,8 @@ public class StudentController {
         student.setAge(age);
         studentService.create(student);
     }
-    private void update(BufferedReader bf) throws IOException{
+
+    private void update(BufferedReader bf) throws IOException {
         System.out.println("Enter id");
         String id = bf.readLine();
         System.out.println("Please enter the new first name:");
@@ -89,7 +94,7 @@ public class StudentController {
         studentService.update(student);
     }
 
-    private void delete(BufferedReader bf) throws IOException{
+    private void delete(BufferedReader bf) throws IOException {
         System.out.println("Please enter ID student: ");
         String id = bf.readLine();
         Student student = studentService.delete(id);
@@ -103,11 +108,12 @@ public class StudentController {
         Student student = studentService.findById(id);
         System.out.println("student = " + student);
     }
+
     private void findAll() {
         Student[] students = studentService.findAll();
         for (Student student : students) {
             System.out.println("student = " + student);
-            
+
         }
     }
 }

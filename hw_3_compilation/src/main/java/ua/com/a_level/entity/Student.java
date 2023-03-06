@@ -7,7 +7,7 @@ public class Student extends BaseEntity {
     private String lastName;
     private String phone;
     private String email;
-    private  int age;
+    private int age;
 
     public String getFirstName() {
         return firstName;
