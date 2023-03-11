@@ -1,7 +1,6 @@
 package ua.com.a_level.main;
 
 import ua.com.a_level.controller.Menu;
-
 import java.io.IOException;
 
 public class Main {
