@@ -20,6 +20,7 @@ public class GarageController {
             crud(bf, str);
         }
     }
+
     private void menu() {
         System.out.println();
         System.out.println("====================================");
@@ -42,6 +43,7 @@ public class GarageController {
         System.out.println("====================================");
         System.out.println();
     }
+
     private void crud(BufferedReader bf, String str) throws IOException {
         switch (str) {
             case "1" -> createCar(bf);
@@ -61,6 +63,7 @@ public class GarageController {
         }
         menu();
     }
+
     private void createCar(BufferedReader bf) throws IOException {
         System.out.println("Create car:");
         Car car = new Car();
@@ -70,6 +73,7 @@ public class GarageController {
         GarageService.addCar(car);
         System.out.println("Car create successfully!");
     }
+
     private void createGarage(BufferedReader bf) throws IOException {
         System.out.println("Create garage");
         Garage garage = new Garage();
@@ -77,6 +81,7 @@ public class GarageController {
         GarageService.addGarage(garage);
         System.out.println("Garage create successfully!");
     }
+
     private void findByIdCar(BufferedReader bf) throws IOException {
         System.out.println("Find car by id");
         System.out.println("Please enter id:");
@@ -88,6 +93,7 @@ public class GarageController {
             System.out.println("Car = " + car);
         }
     }
+
     private void findByIdGarage(BufferedReader bf) throws IOException {
         System.out.println("Find garage by id");
         System.out.println("Please enter id:");
@@ -99,6 +105,7 @@ public class GarageController {
             System.out.println("Garage = " + garage);
         }
     }
+
     private void putCarToGarage(BufferedReader bf) throws IOException {
         System.out.println("Put car to garage");
         System.out.println("Please enter garage id:");
@@ -112,6 +119,7 @@ public class GarageController {
             System.out.println("This id was not found");
         }
     }
+
     private void findCarByGarage(BufferedReader bf) throws IOException {
         System.out.println("Find all cars by garage");
         System.out.println("Please enter garage id");
@@ -123,6 +131,7 @@ public class GarageController {
             cars.forEach(System.out::println);
         }
     }
+
     private void findAllCars() {
         System.out.println("Find all cars");
         List<Car> cars = GarageService.allCars();
@@ -132,6 +141,7 @@ public class GarageController {
             cars.forEach(System.out::println);
         }
     }
+
     private void findAllGarages() {
         System.out.println("Find all garages");
         List<Garage> garages = GarageService.allGarages();
@@ -141,6 +151,7 @@ public class GarageController {
             garages.forEach(System.out::println);
         }
     }
+
     private void updateCar(BufferedReader bf) throws IOException {
         System.out.println("Update car owner");
         System.out.println("Please enter car id which you want to update");
@@ -154,6 +165,7 @@ public class GarageController {
             } else System.out.println("Wrong Data! Use letters!");
         } else System.out.println("This id was not found");
     }
+
     private void carDelete(BufferedReader bf) throws IOException {
         System.out.println("Delete car");
         System.out.println("Please enter car id which you want to delete");
@@ -165,6 +177,7 @@ public class GarageController {
             System.out.println("This id was not found");
         }
     }
+
     private void garageDelete(BufferedReader bf) throws IOException {
         System.out.println("Delete garage");
         System.out.println("Please enter garage id which you want to delete");
@@ -176,6 +189,7 @@ public class GarageController {
             System.out.println("This id was not found");
         }
     }
+
     private void deleteCarFromGarages(BufferedReader bf) throws IOException {
         System.out.println("Delete car from garage");
         System.out.println("Please enter car id car which you want to delete");
@@ -189,6 +203,7 @@ public class GarageController {
             System.out.println("This id was not found");
         }
     }
+
     private void confirmCarBrand(BufferedReader bf, Car car) throws IOException {
         String carBrand;
         while (true) {
@@ -202,6 +217,7 @@ public class GarageController {
             }
         }
     }
+
     private void confirmCarOwnerName(BufferedReader bf, Car car) throws IOException {
         String carOwnerName;
         while (true) {
@@ -215,6 +231,7 @@ public class GarageController {
             }
         }
     }
+
     private void confirmSerialNumber(BufferedReader bf, Car car) throws IOException {
         String serialNumber;
         while (true) {
@@ -229,6 +246,7 @@ public class GarageController {
         }
 
     }
+
     private void confirmGarageAddress(BufferedReader bf, Garage garage) throws IOException {
         String garageAddress;
         while (true) {
@@ -242,6 +260,7 @@ public class GarageController {
             }
         }
     }
+
     private void newGarageForCar(BufferedReader bf) throws IOException {
         System.out.println("Change garage for car");
         System.out.println("Enter car id which you want to replace");
@@ -258,6 +277,7 @@ public class GarageController {
             System.out.println("This id was not found");
         }
     }
+
     private void exit() {
         System.out.println("Good Bye!");
         System.exit(0);

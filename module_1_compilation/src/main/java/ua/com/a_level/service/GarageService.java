@@ -10,9 +10,10 @@ import java.util.Set;
 
 public class GarageService {
     private static List<Car> cars = new ArrayList<>();
-    private static  List<Garage> garages = new ArrayList<>();
+    private static List<Garage> garages = new ArrayList<>();
 
-    private GarageService() {}// приватный конструктор без параметров,
+    private GarageService() {
+    }// приватный конструктор без параметров,
     // чтобы предотвратить создание экземпляров класса извне.
 
     private static String carGenerateId() {
@@ -48,6 +49,7 @@ public class GarageService {
                 findFirst()
                 .orElse(null);
     }
+
     public static Garage getGarage(String id) {
         return garages.
                 stream().
@@ -57,7 +59,7 @@ public class GarageService {
     }
 
 
-    public static void addCarToGarage (String carId, String garageId){
+    public static void addCarToGarage(String carId, String garageId) {
         Car car = getCar(carId);
         Garage garage = getGarage(garageId);
         for (Garage garage_i : garages) {
@@ -69,6 +71,7 @@ public class GarageService {
             garage.getCarIdList().add(carId);
         }
     }
+
     public static List<Car> findByGarage(String garageId) {
         List<Car> cars = new ArrayList<>();
         if (getGarage(garageId) != null) {
@@ -88,6 +91,7 @@ public class GarageService {
         garages.stream().map(Garage::getCarIdList).forEach(car -> car.remove(id));
         return cars.removeIf(car -> car.getId().equals(id));
     }
+
     public static boolean deleteCarFromGarage(String carNum, String garageNum) {
         Garage garage = getGarage(garageNum);
         Car car = getCar(carNum);
@@ -95,6 +99,7 @@ public class GarageService {
         return car.getGarageId().remove(garageNum);
 
     }
+
     public static boolean deleteGarage(String id) {
         cars.stream().map(Car::getGarageId).forEach(garage -> garage.remove(id));
         return garages.removeIf(garage -> garage.getId().equals(id));
