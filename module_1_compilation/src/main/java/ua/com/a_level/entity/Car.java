@@ -45,6 +45,6 @@ public class Car extends BaseEntity {
                 ", Car Serial Number = '" + serialNumber + '\'' +
                 ", Garage Id = " + idGarage +
                 ", ID = " + getId() +
-                "} " ;
+                "} ";
     }
 }
