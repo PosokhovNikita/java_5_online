@@ -1,0 +1,65 @@
+12
+Lutsk
+3
+2 8
+12 2
+10 5
+Chernigov
+3
+1 8
+9 4
+3 7
+Kharkov
+4
+7 2
+4 4
+2 7
+9 9
+Dnepr
+3
+3 4
+7 3
+5 6
+Nikolaev
+3
+6 3
+4 6
+8 4
+Odessa
+2
+5 3
+11 8
+Poltava
+3
+3 2
+4 3
+8 5
+Kirovograd
+3
+5 4
+7 5
+9 7
+Kiev
+4
+2 4
+10 3
+8 7
+3 9
+Zhytomir
+3
+9 3
+11 3
+1 5
+Vinnitsa
+3
+6 8
+12 4
+10 3
+Ternopol
+2
+11 4
+1 2
+3
+Odessa Kharkov
+Zhytomir Vinnitsa
+Ternopol Chernigov
